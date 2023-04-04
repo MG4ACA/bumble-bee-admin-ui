@@ -31,12 +31,16 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from 'vue-router'
 
-const userName= ref()
-const password= ref()
+
+const userName = ref()
+const password = ref()
+const router = useRouter()
+
 
 const login = () => {
-
+    router.push({path: '/admin-panel'})
 }
 
 const register = () => {
