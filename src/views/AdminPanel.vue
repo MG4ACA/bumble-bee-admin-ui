@@ -3,7 +3,7 @@
     <div class="p-col-fixed sidebar">
       <div class="p-sidebar p-d-flex p-flex-column">
         <div class="p-sidebar-header">
-          <img src="../assets/bumblebee_final.jpg" alt="" class="">
+          <img src="../assets/bumblebee_final.webp" alt="" class="">
           <h3>BUMBLE BEE__ONLINE LOAN SERVICE</h3>
         </div>
         <div class="p-sidebar-content">
@@ -46,7 +46,7 @@ import Brands from "./Brands.vue";
 import Customers from "./Customers.vue";
 
 onMounted(()=>{
-  isProductVisible.value = true
+  isCategoryVisible.value = true
 })
 
 const isProductVisible=ref(false)
@@ -162,6 +162,7 @@ const loadPanel=(panel)=>{
 
 .content {
   padding: 1rem;
+  padding-bottom: 0;
   margin-left: 1rem;
   width: calc(100% - 15.5rem);
   background: #ffffff;
