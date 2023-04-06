@@ -46,7 +46,7 @@ import Brands from "./Brands.vue";
 import Customers from "./Customers.vue";
 
 onMounted(()=>{
-  isCategoryVisible.value = true
+  isBrandVisible.value = true
 })
 
 const isProductVisible=ref(false)

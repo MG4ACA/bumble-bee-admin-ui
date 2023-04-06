@@ -9,7 +9,7 @@
               <template #header>
                   <div class="flex">
                     <div class="flex flex-wrap align-items-center justify-content-between gap-2">
-                      <span class="text-xl text-900 font-bold">Products</span>
+                      <span class="text-xl text-900 font-bold">Categories</span>
                   </div>
                   <div class="search-margin-custom flex justify-content-end">
                 <span class="p-input-icon-left">
