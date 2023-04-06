@@ -1,6 +1,6 @@
 <template>
     <div>Hi Category</div>
-  </template>
+</template>
   
   <script>
   export default {

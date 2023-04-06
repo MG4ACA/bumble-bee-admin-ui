@@ -4,15 +4,15 @@
             <div class="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5">
                 <div class="flex align-items-center gap-2 w-9">
                    <div class="w-full">
-                    <label>Username</label>
-                    <InputText id="username" type="text" class="w-full" />
+                        <label>Username</label>
+                        <InputText id="username" type="text" class="w-full" v-model="userName"/>
                    </div>
                     
                 </div>
                 <div class="flex align-items-center gap-2 w-9">
                     <div class="w-full">
                         <label>Password</label>
-                    <InputText id="password" type="password" class="w-full" />
+                        <InputText id="password" type="password" class="w-full" v-model="password" />
                     </div>
                     
                 </div>
@@ -32,14 +32,18 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from 'vue-router'
+import { useUserStore } from '../stores/userStore'
 
 
-const userName = ref()
-const password = ref()
+const userName = ref('')
+const password = ref('')
 const router = useRouter()
+const userStore = useUserStore()
 
 
 const login = () => {
+    console.log('log', typeof userName.value);
+    userStore.getAccessToken(userName, password)
     router.push({path: '/admin-panel'})
 }
 

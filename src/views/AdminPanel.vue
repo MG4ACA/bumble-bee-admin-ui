@@ -3,25 +3,26 @@
     <div class="p-col-fixed sidebar">
       <div class="p-sidebar p-d-flex p-flex-column">
         <div class="p-sidebar-header">
-          <h3>Navigation</h3>
+          <img src="../assets/bumblebee_final.jpg" alt="" class="">
+          <h3>BUMBLE BEE__ONLINE LOAN SERVICE</h3>
         </div>
         <div class="p-sidebar-content">
           <ul class="p-menu p-menu-dynamic p-menu-root">
             <li @click="loadPanel('product')" :class="{ 'text-style': isProductVisible }"> 
-                <i class="pi pi-home"></i>
+                <i class="pi pi-shopping-cart"></i>
                 <span>PRODUCT MANAGE</span>
               
             </li>
             <li @click="loadPanel('category')" :class="{ 'text-style': isCategoryVisible}">
-                <i class="pi pi-users"></i>
+                <i class="pi pi-home"></i>
                 <span>CATEGORY MANAGE</span>
             </li>
             <li @click="loadPanel('brand')" :class="{ 'text-style': isBrandVisible }">
-                <i class="pi pi-cog"></i>
+                <i class="pi pi-slack"></i>
                 <span>BRAND MANAGE</span>
             </li> 
             <li @click="loadPanel('customer')" :class="{ 'text-style': isCustomerVisible }">
-                <i class="pi pi-cog"></i>
+                <i class="pi pi-users"></i>
                 <span>CUSTOMER MANAGE</span>
             </li>
           </ul>
@@ -38,12 +39,15 @@
 </template>
 
 <script setup>
-import { ref } from "vue"
+import { onMounted, ref } from "vue"
 import Products from "./Products.vue";
 import Category from "./Category.vue";
 import Brands from "./Brands.vue";
 import Customers from "./Customers.vue";
 
+onMounted(()=>{
+  isProductVisible.value = true
+})
 
 const isProductVisible=ref(false)
 const isBrandVisible=ref(false)
@@ -80,7 +84,6 @@ const loadPanel=(panel)=>{
       break;
   }
   if (panel==='product') {
-    console.log('log called');
     isProductVisible.value=true
   }
 }
@@ -100,6 +103,22 @@ const loadPanel=(panel)=>{
 
 }
 
+.p-sidebar .p-sidebar-header{
+  display: flex;
+  padding-bottom: 12px !important;
+    padding-top: 12px !important;
+    
+}
+
+.p-sidebar .p-sidebar-header img{
+  width: 50px;
+}
+
+.p-sidebar .p-sidebar-header h3{
+  margin-left: 15px;
+  font-weight: 700;
+}
+
 .sidebar .p-sidebar-content {
   padding: 1rem;
   display: flex;
@@ -107,7 +126,7 @@ const loadPanel=(panel)=>{
 
 .sidebar .p-menu-root {
   padding: 1rem !important;
-  height: 84vh;
+  height: 87vh;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -115,7 +134,7 @@ const loadPanel=(panel)=>{
 
 .sidebar .p-menu-root li{
   cursor: pointer;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: hsla(160, 100%, 37%, 1);
 
 }

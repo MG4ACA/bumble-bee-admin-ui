@@ -8,6 +8,9 @@ import Button from "primevue/button"
 import InputText from "primevue/inputtext"
 import Divider from "primevue/divider"
 import Toast from "primevue/toast"
+import DataTable from "primevue/datatable"
+import InputNumber from "primevue/inputnumber"
+import DropDown from "primevue/dropdown"
 
 
 import './assets/main.css'
@@ -24,8 +27,11 @@ app.use(PrimeVue, { ripple: true })
 
 app.component('Button', Button)
 app.component('InputText', InputText)
+app.component('InputNumber', InputNumber)
 app.component('Divider', Divider)
 app.component('Toast', Toast)
+app.component('DataTable', DataTable)
+app.component('DropDown', DropDown)
 
 app.component()
 
